@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+::selection {
+  background: var(--fourth-color);
+  color: var(--first-color);
+}
+
+:root{
+    --first-color: #0F0F0F;
+    --second-color: #202020;
+    --third-color: #5DD62C;
+    --fourth-color: #337418;
+    --fifth-color: #F8F8F8;
+}
+
+.wrapper{
+    margin-top: 60px;
+    width: width;
+    height: 1000px;
+    background-repeat: repeat;
+    background-size: cover;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/image.png);
+    animation-name: image_move;
+    animation-duration: 400s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes image_move{
+    0%{
+        background-position: -1000%;
+    }
+
+    50%{
+        background-position: 1000%;
+    }
+
+    100%{
+        background-position: -1000%;
+    }
+}
+
+.withoutShapka{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:start;
+    justify-content: center;
+}
+
+.LogIn{
+    margin-top: 100px;
+    display: flex;
+    width: 35%;
+    height: 500px;
+    justify-content: center;
+    opacity: 0.9;
+    background-color: var(--first-color);
+    border-radius: 1.5em;
+    box-shadow:0px 0px 10px;
+    flex-wrap: wrap;
+    
+}
+
+.LogIn .title{
+    width: 80%;
+    height: 40px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0.8;
+}
+
+.title>p{
+    color: var(--fifth-color);
+    font-size: 3em;
+    justify-content: center;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-bottom: 5px solid var(--fifth-color);
+    color: var(--fifth-color);
+    background-color: rgba(111, 111, 111, 0);
+    font-size: 30px;
+    text-indent: 30px;
+    padding-bottom: 4px;
+
+    opacity: 0.8;
+}
+
+.input:autofill{
+    color: var(--fifth-color);
+    background-color: rgba(111, 111, 111, 0);
+    font-size: 30px;
+}
+
+.input::placeholder{
+    color: var(--fifth-color);
+    font-size: 1em;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.submit{
+    width: 55%;
+    height: 40px;
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    opacity: 0.8;
+}
+
+.submit:hover{
+    transform: scale(1.3);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.link_sign_up{
+    width: 70%;
+    height: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link_sign_up>p{
+    color: var(--fifth-color);
+    font-size: 20px;
+
+    opacity: 0.8;
+}
+
+.link_sign_up>a{
+    color: var(--fifth-color);
+    font-size: 20px;
+
+    opacity: 0.8;
+}
+
+form>a{
+    color: var(--fifth-color);
+    font-size: 20px;
+    width: 70%;
+    text-align: center;
+    
+    opacity: 0.8;
+}
+
+
+.footer{
+    background-color: var(--second-color);
+    width: width;
+    height: 400px;
+
+    color:var(--fifth-color);
+    font-size: 20em;
+    text-align: center;
+
+}
+
+@media(max-width: 450px)
+{
+    .wrapper{
+        margin-top: 37px;
+        background: linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/image.png);
+    }
+
+    .LogIn{
+        margin-top: 20px;
+        width: 90%;
+        opacity: 0.9;
+        height: 400px;
+    }
+
+
+    @keyframes image_move{
+        0%{
+            background-position: -500%;
+        }
+
+        50%{
+            background-position: 500%;
+        }
+
+        100%{
+            background-position: -500%;
+        }
+    }
+
+    .input::placeholder{
+        color: var(--fifth-color);
+        font-size: 0.7em;
+        text-indent: 8px;
+    }
+
+    .link_sign_up{
+        margin-bottom: 0;
+    }
+
+    .link_sign_up>p
+    {
+        display: none;
+    }
+
+    .link_sign_up{
+        justify-content: center;
+    }
+
+    .title>p{
+        font-size: 40px;
+    }
+
+    .link_sign_up>a{
+        font-size: 16px;
+    }
+
+    form>a{
+        font-size: 16px;
+    }
+
+    #reg{
+        width: 80%;
+    }
+}

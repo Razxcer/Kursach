@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+  background: var(--fourth-color);
+  color: var(--first-color);
+}
+
+:root{
+    --first-color: #0F0F0F;
+    --second-color: #202020;
+    --third-color: #5DD62C;
+    --fourth-color: #337418;
+    --fifth-color: #F8F8F8;
+}
+
+.wrapper{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: var(--first-color);
+}
+
+.Add_place{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px;
+}
+
+.AdminPanel
+{
+    width: 350px;
+    background-color: var(--fourth-color);
+    display: flex;
+}
+
+.About{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.About>#img{
+    width: 30%;
+    height: 300px;
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+    text-align: center;
+    align-content: center;
+    font-size: 1.5em;
+}
+
+.About .input_text{
+    width: 30%;
+    height: 30px;
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.15em;
+    text-indent: 10px;
+}
+
+.About .input_text::placeholder{
+    text-indent: 10px;
+}
+
+.About .input_text:focus{
+    outline: none;
+}
+
+.infoGame{
+    width: 65%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Genres{
+    width: 50%;
+    height: 400px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Genres>p{
+    color: var(--third-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.Genres>div.checkGenre{
+    height: 25px;
+    align-items: center;
+}
+
+.Genres input[type="checkbox"]{
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: var(--second-color);
+    border: 2px solid var(--second-color);
+}
+
+.Genres input[type="checkbox"]:checked{
+    width: 18px;
+    height: 18px;
+    background-color: #5DD62C;
+}
+
+.Genres input[type="checkbox"]:disabled{
+    width: 18px;
+    height: 18px;
+    background-color: #337418;
+}
+
+.Genres label{
+    color: var(--fifth-color);
+    font-size: 1.2em;
+    align-content: center;
+    opacity: 0.8;
+    margin: auto;
+    margin-left: 5px;
+}
+
