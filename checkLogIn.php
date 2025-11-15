@@ -14,20 +14,19 @@
 
     $result = $users->query($thisUser);
     $num_rows = $result->rowCount();
+
+
+    $users = null;
+    $result = null;
+    $thisUser = null;
+
     if($num_rows>0){
         header("Location: ./main.php");
+        exit;
     }
     else{
         header("Location: ./index.php");
-        echo '<script>alert("Введённые данные не верные");</script>';
+        exit;
     }
-
-
-
-
-
-
-
-
 
 ?>

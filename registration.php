@@ -100,7 +100,7 @@
                     <div class="title"><p>Регистрация</p></div>
                     <input type="email" name="email" id="email" class="input email" placeholder="Email" maxlength="100">
                     <input type="text" name="login" id="login" class="input login" placeholder="Логин" maxlength="40">
-                    <input type="password" name="password" id="password" class="input password" placeholder="Пароль" maxlength="100">
+                    <input type="password" name="password" id="password" class="input password" placeholder="Пароль" maxlength="100">  <!--Пока  не важно повторять пароль-->
                     <input type="password" name="password2" id="password2" class="input password2" placeholder="Повторите пароль" maxlength="100">
                     <input type="submit" value="Зарегистрироваться" class="submit" id="reg">
                 </form>
