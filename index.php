@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -97,8 +98,8 @@
                 
                 <form action="checkLogIn.php" method="post">
                     <div class="title"><p>Вход</p></div>
-                    <input type="text" name="login" id="login" class="input login" placeholder="Логин" maxlength="40">
-                    <input type="password" name="password" id="password" class="input password" placeholder="Пароль" maxlength="100">
+                    <input type="text" name="login" id="login" class="input login" placeholder="Логин" minlength="2" maxlength="40" value = <?php echo isset($_SESSION['login'])?$_SESSION['login']:""; ?>>
+                    <input type="password" name="password" id="password" class="input password" placeholder="Пароль" minlength="6" maxlength="100" value = <?php echo isset($_SESSION['password'])?$_SESSION['password']:""; ?>>
                     <input type="submit" value="Войти" class="submit">
 
                     <div class="link_sign_up">
@@ -115,6 +116,15 @@
     <div class="footer">
         <!-- Вопросы? -->
     </div>
+
+    <?php 
+    if (isset($_SESSION['warning']))
+    {
+    echo '<script>alert("';
+    echo $_SESSION['warning'];
+    echo '")</script>';
+    }
+    ?>
 
 </body>
 </html>

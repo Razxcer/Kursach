@@ -100,9 +100,9 @@
                 <form action="checkRegistration.php" method="post">
                     <div class="title"><p>Регистрация</p></div>
                     <input type="email" name="email" id="email" class="input email" placeholder="Email" maxlength="100" value = <?php echo isset($_SESSION['email'])?$_SESSION['email']:""; ?>>
-                    <input type="text" name="login" id="login" class="input login" placeholder="Логин" maxlength="40" value = <?php echo isset($_SESSION['login'])?$_SESSION['login']:""; ?>>
-                    <input type="password" name="password" id="password" class="input password" placeholder="Пароль" maxlength="100" value = <?php echo isset($_SESSION['password'])?$_SESSION['password']:""; ?>>  
-                    <input type="password" name="password2" id="password2" class="input password2" placeholder="Повторите пароль" maxlength="100" value = <?php echo isset($_SESSION['password2'])?$_SESSION['password2']:""; ?>>
+                    <input type="text" name="login" id="login" class="input login" placeholder="Логин" minlength="2" maxlength="40" value = <?php echo isset($_SESSION['login'])?$_SESSION['login']:""; ?>>
+                    <input type="password" name="password" id="password" class="input password" placeholder="Пароль" minlength="6" maxlength="100" value = <?php echo isset($_SESSION['password'])?$_SESSION['password']:""; ?>>  
+                    <input type="password" name="password2" id="password2" class="input password2" placeholder="Повторите пароль" minlength="6" maxlength="100" value = <?php echo isset($_SESSION['password2'])?$_SESSION['password2']:""; ?>>
                     <input type="submit" value="Зарегистрироваться" class="submit" id="reg">
                 </form>
             </div>

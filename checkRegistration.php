@@ -28,33 +28,51 @@
     }
     else{
 
-    try {
-        $users = new PDO('mysql:host=MySQL-8.4;port=3306;dbname=kursach', "root");
-    }
-    catch (PDOException $e){
-        echo "Не робит ни чё", $e;
-    }
+        try {
+            $users = new PDO('mysql:host=MySQL-8.4;port=3306;dbname=kursach', "root");
+        }
+        catch (PDOException $e){
+            echo "Не робит ни чё", $e;
+        }
 
-    $inputLogin = $_POST['login'];
-    $inputPassword = $_POST['password'];
-    $inputEmail = $_POST['email'];
+        $inputLogin = $_POST['login'];
+        $inputPassword = $_POST['password'];
+        $inputEmail = $_POST['email'];
 
 
-    $thisUser = "SELECT * FROM users WHERE login = '$inputLogin' AND password = '$inputPassword'";
+        $thisUser = "SELECT * FROM users WHERE login = '$inputLogin' AND password = '$inputPassword'";
 
-    $result = $users->query($thisUser);
-    $num_rows = $result->rowCount();
+        $result = $users->query($thisUser);
+        $num_rows = $result->rowCount();
 
-    if($num_rows==0){
+        $result = null;
+        $thisUser = null;
 
-        $newStr = $users->query("INSERT INTO users (login, password, email) VALUES ('$inputLogin', $inputPassword, '$inputEmail');");
-        header("Location: ./main.php");
-        exit;
-    }
-    else{
-        header("Location: ./index.php");
-        exit;
-    }   
+        if($num_rows==0){
+
+            $newStr = $users->query("INSERT INTO users (login, password, email) VALUES ('$inputLogin', $inputPassword, '$inputEmail');");
+            
+            
+            $users = null;
+            $inputLogin = null;
+            $inputPassword = null;
+            $inputEmail = null;
+
+
+            header("Location: ./main.php");
+            exit;
+            
+        }
+        else{
+            $users = null;
+            $inputLogin = null;
+            $inputPassword = null;
+            $inputEmail = null;
+
+            $_SESSION['warning'] = "Такой аккаунт уже существует, выполните вход";
+            header("Location: ./index.php");
+            exit;
+        }   
 
     }
 

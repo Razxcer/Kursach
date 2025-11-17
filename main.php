@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php session_destroy(); ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
