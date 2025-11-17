@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+    $_SESSION['login'] = $_POST['login'];
+    $_SESSION['password'] = $_POST['password'];
+    $_SESSION['warning'] = null;
+
+
     try {
         $users = new PDO('mysql:host=MySQL-8.4;port=3306;dbname=kursach', "root");
     }

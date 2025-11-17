@@ -1,10 +1,32 @@
 <?php
+    session_start();
 
-    if($_POST['password'] != $_POST['password2'])
+
+
+
+    $_SESSION['login'] = $_POST['login'];
+    $_SESSION['password'] = $_POST['password'];
+    $_SESSION['password2'] = $_POST['password2'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['warning'] = null;
+
+
+
+
+    
+    if($_POST['password'] == "" || $_POST['password2'] == "" || $_POST['login']=="" ||  $_POST['email'] == "")
     {
+        $_SESSION['warning'] = "Введите ВСЕ данные!";
         header("Location: ./registration.php");
         exit;
     }
+    else if($_POST['password'] != $_POST['password2'])
+    {
+        $_SESSION['warning'] = "Введёные пароли не совпадают!";
+        header("Location: ./registration.php");
+        exit;
+    }
+    else{
 
     try {
         $users = new PDO('mysql:host=MySQL-8.4;port=3306;dbname=kursach', "root");
@@ -34,7 +56,7 @@
         exit;
     }   
 
-
+    }
 
 
 
