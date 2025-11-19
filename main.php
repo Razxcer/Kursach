@@ -121,9 +121,9 @@
                         foreach($result as $row){
                             echo '
                                 <li class="spisok_element">
-                                    <img src="';
+                                    <a class="aboutProdLink"><img src="';
                             echo $row['imageURL'];
-                            echo '" alt="Картинка">
+                            echo '" alt="Картинка"></a>
                                     <p class="nameofGame">';
                             echo $row['name'];
                             echo '</p>
@@ -148,18 +148,7 @@
 
                 ?>
 
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
-                    <li class="spisok_element"></li>
+                    
                    
 
 

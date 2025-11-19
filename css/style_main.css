@@ -30,7 +30,8 @@
 .wrapper #menu{
     display: flex;
     width: 300px;
-    height: 1500px;
+    min-height: 1500px;
+    max-height: 100%;
     background-color: var(--fourth-color) ;
     color: var(--first-color);
 }
@@ -67,12 +68,17 @@
     justify-content: center;
     align-items:start;
     box-shadow: 0px 0px 3px 0.5px var(--fifth-color);
-    padding-top: 0px;
 }
 
-.spisok_element>img{
+.spisok_element>a{
     width: 100%;
     max-height: 70%;
+}
+
+.spisok_element img{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .spisok_element>p{
@@ -80,7 +86,7 @@
     align-content: center;
     text-align: center;
     color: var(--fifth-color);
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     text-shadow: 2px 2px 3px var(--first-color);
 }
@@ -144,7 +150,8 @@
         position: absolute;
         width: 80%;
         left: -80%;
-        height: 1500px;
+        min-height: 1000px;
+        max-height: 100%;
         background-color: var(--fourth-color) ;
         color: var(--first-color);
         transition: 0.7s;
