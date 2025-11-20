@@ -71,14 +71,7 @@ session_start();
         $result = null;
         $thisUser = null;
 
-        if($num_rows>0){
-            header("Location: ./main.php");
-            exit;
-        }
-        else{
-            header("Location: ./index.php");
-            exit;
-        }
+        
     }
 
 ?>
