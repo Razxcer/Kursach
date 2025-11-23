@@ -5,9 +5,9 @@ import Head from './components/Head.vue'
 
 <template>
 
-<div class="wrap">
+<div class="wrap">  
+  <Head></Head>
 
-<Head></Head>
 
 
 </div> 
@@ -19,6 +19,10 @@ import Head from './components/Head.vue'
 .wrap{
   width: 100%;
 }
+
+
+
+
 
 @media (min-width: 1024px) {
 }
