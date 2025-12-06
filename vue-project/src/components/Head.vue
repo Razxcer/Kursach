@@ -72,20 +72,26 @@
 <style scoped>
 
 .head{
+    position: fixed;
     width: 100%;
     height: 60px;
     background-color: var(--color-background-soft);
     display: flex;
+    justify-content: center;
     top: 0;
     left: 0;
+    box-shadow: 0px 0px 5px 5px var(--color-background);
+    z-index: 999;
 }
 
 .logo-link{
     height: 100%;
     display: flex;
-    width: 350px;
+    width: 350px; 
+    justify-self:left;
     justify-content: center;
     margin-right: 30px;
+
 }
 
 .logo{

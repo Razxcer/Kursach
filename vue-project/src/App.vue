@@ -1,13 +1,22 @@
 <script setup>
 import Head from './components/Head.vue'
-// import Test from './components/Test.vue'
+import Filters from './components/Filters.vue'
+import Catalog from './components/CatalogProducts.vue'
 </script>
 
 <template>
 
-<div class="wrap">  
+<div class="wrapper">  
+  
   <Head></Head>
 
+  <div class="left-menu">
+    <Filters></Filters>
+  </div>
+
+  <div class="right-catalog">
+    <Catalog></Catalog>
+  </div>
 
 
 </div> 
@@ -16,10 +25,21 @@ import Head from './components/Head.vue'
 
 <style scoped>
 
-.wrap{
+.wrapper{
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px;
 }
 
+.left-menu{
+  width: 350px;
+}
+
+.right-catalog{
+  margin-top: 20px;
+  width: calc(100% - 350px);
+}
 
 
 
