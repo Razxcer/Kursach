@@ -35,7 +35,7 @@
 <style scoped>
 
 .wrap{
-    width: 100%;
+    display: flex;
 }
 
 .catalog{

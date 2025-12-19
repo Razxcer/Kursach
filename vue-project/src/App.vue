@@ -7,17 +7,12 @@ import Catalog from './components/CatalogProducts.vue'
 <template>
 
 <div class="wrapper">  
-  
-  <Head></Head>
 
-  <div class="left-menu">
-    <Filters></Filters>
-  </div>
+    <Head />
 
-  <div class="right-catalog">
-    <Catalog></Catalog>
-  </div>
+    <Filters class="left-menu"/>
 
+    <Catalog class="right-catalog"/>
 
 </div> 
 
@@ -27,6 +22,7 @@ import Catalog from './components/CatalogProducts.vue'
 
 .wrapper{
   width: 100%;
+  height: 2500px;
   display: flex;
   flex-wrap: wrap;
   padding-top: 60px;
@@ -34,6 +30,7 @@ import Catalog from './components/CatalogProducts.vue'
 
 .left-menu{
   width: 350px;
+  height: 100%;
 }
 
 .right-catalog{
